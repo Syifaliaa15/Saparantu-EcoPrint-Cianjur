@@ -1,0 +1,325 @@
+/* GLOBAL RESET DAN FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+  scroll-behavior: smooth; /* <-- MENJAMIN SMOOTH SCROLL */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER/NAVBAR */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4caf50; /* Warna hijau Eco-Print */
+}
+
+.nav-menu a {
+  margin-left: 25px;
+  font-weight: 600;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #4caf50;
+}
+
+/* HAMBURGER MENU (MOBILE) */
+.hamburger-menu {
+  display: none; /* Sembunyikan di desktop */
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 65px; /* Sesuaikan dengan tinggi header */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.nav-menu.active a {
+  margin: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* SECTION UTAMA */
+.section {
+  padding: 80px 0;
+  margin-top: 60px; /* Offset untuk fixed header */
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #4caf50;
+}
+
+.dark-bg {
+  background-color: #e8f5e9; /* Warna latar belakang lembut untuk galeri */
+}
+
+/* HOME/HERO SECTION */
+.hero-section {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("https://via.placeholder.com/1920x800.png?text=Latar+Belakang+Eco-Print"); /* Ganti dengan gambar Anda */
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 100px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #388e3c;
+}
+
+/* TENTANG KAMI */
+.about-content p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* GALERI (Full-Width Single Item Slider) */
+
+/* Galeri Section: Hapus padding horizontal agar slider full-width */
+#gallery {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%; /* <-- FULL WIDTH */
+  margin: 0; /* <-- HAPUS MARGIN AGAR MENTOK PINGGIR */
+  border-radius: 0; /* <-- HAPUS SUDUT MELENGKUNG */
+  box-shadow: none; /* <-- HAPUS BAYANGAN */
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+  min-width: 100%;
+  height: 450px; /* <-- TINGGI DITINGKATKAN UNTUK FULL-WIDTH */
+  flex-shrink: 0;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tombol Navigasi */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(76, 175, 80, 0.7); /* Warna hijau Saparantu */
+}
+
+.prev-btn {
+  left: 0;
+  padding-left: 20px; /* Padding agar tidak terlalu mepet */
+  border-radius: 0 5px 5px 0;
+}
+
+.next-btn {
+  right: 0;
+  padding-right: 20px; /* Padding agar tidak terlalu mepet */
+  border-radius: 5px 0 0 5px;
+}
+
+/* KONTAK KAMI */
+
+.section#contact p {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-item {
+  flex-basis: 45%;
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.contact-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-item a {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* MEDIA QUERIES (RESPONSIVE DESIGN) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 5%;
+  }
+
+  .nav-menu {
+    display: none; /* Sembunyikan menu di mobile secara default */
+  }
+
+  .hamburger-menu {
+    display: block; /* Tampilkan hamburger di mobile */
+  }
+
+  .hero-section {
+    padding: 120px 0 80px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-basis: 100%;
+    max-width: 350px;
+  }
+
+  .slide-item {
+    height: 300px; /* Ketinggian slide disesuaikan untuk mobile */
+  }
+}
